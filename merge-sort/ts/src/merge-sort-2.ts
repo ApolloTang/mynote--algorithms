@@ -19,14 +19,20 @@ function divide(items: number[]): number[] {
 }
 
 
-// from https://stackblitz.com/edit/typescript-mergesort?file=index.ts
+/**
+ * Lefts and rights array has already being sorted.
+ * See two pointer sorting for how the combine function work
+ */
 function combine(lefts: number[], rights: number[]): number[] {
   const size_left = lefts.length, size_right = rights.length
   let i = 0, j = 0 // pointer for left is 'i', right is 'j'
 
   var combined = []
 
-  // 2 fingers algorithm
+  /*
+   * Two fingers algorithm
+   * from https://stackblitz.com/edit/typescript-mergesort?file=index.ts
+   */
   while (i < size_left && j < size_right) {
     let left = lefts[i], right = rights[j]
 
@@ -35,13 +41,13 @@ function combine(lefts: number[], rights: number[]): number[] {
     } else {
       combined.push(right); j++
     }
-  }
+  } // end while-loop
 
-  return combined.concat(
-    lefts.slice(i)
-  ).concat(
-    rights.slice(j)
-  )
+  const remain_lefts = lefts.slice(i)
+  const remain_rights = rights.slice(j)
+  const finalCombined = combined.concat(remain_lefts, remain_rights)
+
+  return finalCombined
 }
 
 

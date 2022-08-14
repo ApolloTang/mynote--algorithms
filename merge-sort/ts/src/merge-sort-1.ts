@@ -19,14 +19,20 @@ function divide(items: number[]): number[] {
 }
 
 
-// from https://gist.github.com/sjohnsonaz/29e92e5ccbb8513a31609930b46d5faf
+/**
+ * Lefts and rights array has already being sorted.
+ * See two pointer sorting for how the combine function work
+ */
 function combine(lefts: number[], rights: number[]): number[] {
   const size_left = lefts.length, size_right = rights.length
   let i = 0, j = 0 // pointer for left is 'i', right is 'j'
 
   var combined = []
 
-  // 2 fingers algorithm
+  /*
+   * Two fingers algorithm from:
+   * https://gist.github.com/sjohnsonaz/29e92e5ccbb8513a31609930b46d5faf
+   */
   while (i < size_left || j < size_right) {
     let left = lefts[i], right = rights[j]
 
@@ -45,9 +51,10 @@ function combine(lefts: number[], rights: number[]): number[] {
         combined.push(right); j++
       }
     }
-  }
+  } // end while-loop
+
   return combined
-}
+ }
 
 
 // Note [1]

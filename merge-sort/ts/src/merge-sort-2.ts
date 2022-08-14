@@ -36,7 +36,7 @@ function combine(lefts: number[], rights: number[]): number[] {
   while (i < size_left && j < size_right) {
     let left = lefts[i], right = rights[j]
 
-    if (lefts[i] < rights[j]) {
+    if (left < right) {
       combined.push(left); i++
     } else {
       combined.push(right); j++

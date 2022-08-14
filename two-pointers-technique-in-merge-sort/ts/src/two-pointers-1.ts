@@ -1,4 +1,6 @@
 export default function twoPointers(lefts: number[], rights: number[]): void {
+  console.log('----------- algorithm 1')
+
   const size_left = lefts.length, size_right = rights.length
   let i = 0, j = 0 // pointer for left is 'i', right is 'j'
 
@@ -32,11 +34,11 @@ export default function twoPointers(lefts: number[], rights: number[]): void {
      }
 
   } // end while-loop
+  console.log('--- while-loop done ---')
 
   const remain_left = lefts.slice(i)
   const remain_right = rights.slice(j)
 
-  console.log('after while loop')
   console.log('(i,j): ', i,j)
   console.log('combined: ', combined )
   console.log('remains: ', remain_left, remain_right )

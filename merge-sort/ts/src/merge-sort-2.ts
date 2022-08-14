@@ -30,8 +30,8 @@ function combine(lefts: number[], rights: number[]): number[] {
   var combined = []
 
   /*
-   * Two fingers algorithm
-   * from https://stackblitz.com/edit/typescript-mergesort?file=index.ts
+   * Two fingers algorithm from:
+   * https://stackblitz.com/edit/typescript-mergesort?file=index.ts
    */
   while (i < size_left && j < size_right) {
     let left = lefts[i], right = rights[j]

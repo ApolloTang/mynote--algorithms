@@ -3,7 +3,7 @@
 Given 4 characters:
 
 ```
-"a", "b", "a", "d"
+"a", "b", "c", "d"
 ```
 Find all posiblity of arranging this 4 characters into a string using the **backtracking** algorithm.
 

@@ -6,13 +6,14 @@ function twoSum(nums, target) {
       if (map[complement] !== undefined) {
         return [map[complement], i]
       } else {
+        console.log(element, i, map)
         map[element] = i
       }
     }
     return []
   }
 
-var input = [3,2,-1,6,7,11,15]
+var input = [9,2,3,-1,9,11,6,15]
 const result = twoSum(input, 9)
 console.log(result, input[result[0]]+input[result[1]])
 

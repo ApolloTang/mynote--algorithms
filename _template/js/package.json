@@ -1,0 +1,19 @@
+{
+  "name": "node-playground-cjs",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=18.4.0 <19"
+  },
+  "type": "module",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -w src -e .js -x node src/main.js"
+  },
+  "keywords": [],
+  "author": "Apollo Tang",
+  "license": "MIT",
+  "devDependencies": {
+  }
+}

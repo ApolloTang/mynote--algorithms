@@ -32,7 +32,7 @@ The while loop simply generate a series of number (store in `i` in each iteratio
 2,3,4,...,n
 ```
 
-During each iteration the number store in `i` is multiple with the result from the previous iterations:
+During each iteration the number stored in `i` is multipled with the result from the previous iterations:
 
 ```
 ( result from previous iteration )* n-3 * n-2 * n-1 * n
@@ -45,16 +45,16 @@ To wit:
   ( 2*3 ) * 4 * ... * n-2 * n-1 * n
 ..
 ..
-               ( 2*3*4*...*n-2 ) * n-1 * n
-                 ( 2*3*4*...*n-2*n-1 ) * n
-                    ( 2*3*4*...*n-2*n-1*n )
+        ( 2*3*4*...*n-2 ) * n-1 * n
+          ( 2*3*4*...*n-2*n-1 ) * n
+             ( 2*3*4*...*n-2*n-1*n )
 ```
 
 The loop started from 2 becuase `0!` and `1!` are both 1.
 
 The time complexity of this algorithm is O(n) because the amount of time required is limit by the number of interation in the while loop.
 
-The space complexity is O(1) because the number of varible is indenpendent of the size of  `n`. 
+The space complexity is O(1) because the number of varible is indenpendent of the size of  `n`.
 
  This algorithm is better than the recussive algorithm.  In recusion each time the function calls itself another functional scope is create to consume more memories (see below).
 
